@@ -1,0 +1,106 @@
+# ------------------------------------------------------------------
+# Configuração do bot de alertas de props (basquetebol)
+# ------------------------------------------------------------------
+
+# Texto que, se aparecer na página de um jogo, indica que já há mercados de jogador.
+# Ajusta depois de veres como cada casa chama os separadores.
+palavras_props:
+  - "pontos do jogador"
+  - "jogador - pontos"
+  - "props de jogador"
+  - "mercados de jogador"
+  - "jogadores"
+  - "ressaltos"
+  - "assistências"
+  - "triplos marcados"
+  - "pontos + ressaltos"
+  # inglês (SpinHub)
+  - "player points"
+  - "player rebounds"
+  - "player assists"
+  - "player props"
+  - "player specials"
+  - "points + rebounds"
+  - "three pointers made"
+
+# Se alguma destas frases aparecer, assume-se que o site bloqueou o acesso.
+frases_bloqueio:
+  - "não está disponível na sua região"
+  - "não está disponível no seu país"
+  - "not available in your"
+  - "access denied"
+  - "acesso negado"
+  - "verify you are human"
+  - "verifique que é humano"
+
+espera_ms: 4000            # tempo para a página carregar
+max_jogos_por_liga: 15     # só os próximos X jogos de cada liga
+pausa_segundos: 2          # pausa entre jogos (não martelar os sites)
+
+# ------------------------------------------------------------------
+# LIGAS
+# Para cada uma: abre a página da liga no site da casa (no PC, não na app),
+# copia o link da barra de endereço e cola em "url".
+# padrao_jogo: expressão que identifica os links de jogos (opcional).
+#   Se ficar vazio, o bot usa uma regra genérica (links com um ID numérico).
+#   Se não apanhar os jogos certos, corre: python bot.py --descobrir
+# ativo: false desliga a liga sem a apagar.
+# ------------------------------------------------------------------
+ligas:
+  # ---------- Betano ----------
+  - casa: Betano
+    liga: NBA
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+  - casa: Betano
+    liga: EuroLeague
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+  - casa: Betano
+    liga: Liga Portuguesa
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+
+  # ---------- Betclic ----------
+  - casa: Betclic
+    liga: NBA
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+  - casa: Betclic
+    liga: EuroLeague
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+  - casa: Betclic
+    liga: Liga Portuguesa
+    url: "COLA_AQUI_O_LINK"
+    padrao_jogo: ""
+
+  # ---------- SpinHub ----------
+  - casa: SpinHub
+    liga: "Champions League"
+    url: "https://spinhub2.casino/en/sports/basketball/international/champions-league-1673662034060951552/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "EuroCup"
+    url: "https://spinhub2.casino/en/sports/basketball/international/eurocup-1673666062614515712/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "NBL (Austrália)"
+    url: "https://spinhub2.casino/en/sports/basketball/australia/nbl-1669819083228581888/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "Pro A (França)"
+    url: "https://spinhub2.casino/en/sports/basketball/france/pro-a-1669819149402116096/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "Liga Grega"
+    url: "https://spinhub2.casino/en/sports/basketball/greece/greek-basketball-league-1672291749952999424/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "Serie A (Itália)"
+    url: "https://spinhub2.casino/en/sports/basketball/italy/serie-a-1669819118917914624/"
+    padrao_jogo: ""
+  - casa: SpinHub
+    liga: "Liga ACB (Espanha)"
+    url: "https://spinhub2.casino/en/sports/basketball/spain/liga-acb-1669819170327498752/"
+    padrao_jogo: ""
